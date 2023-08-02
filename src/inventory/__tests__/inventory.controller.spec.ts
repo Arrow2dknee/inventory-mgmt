@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 
 import { InventoryController } from '../inventoy.controller';
 import { InventoryService } from '../inventory.service';
-import { stocks, transactions, StockCountResponse } from './mockData';
+import { StockCountResponse, mockSku } from './mockData';
 
 describe('InventoryController', () => {
   let controller: InventoryController;
@@ -31,7 +31,7 @@ describe('InventoryController', () => {
   describe('Get updated quantity for SKU', () => {
     it('should return latest stock quantity for given sku', async () => {
       expect(
-        controller.getUpdatedInventoryForSKU({ sku: 'TVN783304/18/16' }),
+        controller.getUpdatedInventoryForSKU({ sku: mockSku }),
       ).resolves.toEqual(StockCountResponse);
     });
   });

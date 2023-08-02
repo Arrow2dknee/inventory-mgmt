@@ -27,6 +27,8 @@ export const transactions: UnitTransactions[] = [
   },
 ];
 
+export const mockSku = 'TVN783304/18/16';
+
 export const StockCountResponse = {
   sku: 'TVN783304/18/16',
   qty: 100,
